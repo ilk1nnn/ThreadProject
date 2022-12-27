@@ -9,14 +9,20 @@
     <Grid>
         <StackPanel Orientation="Vertical">
             <TextBox Margin="10,10,0,0" Width="200" Height="30"
-                     FontSize="22"></TextBox>
-            <ListBox Width="400" Height="200"
+                     FontSize="20"
+                     Name="wordtxtb">
+            </TextBox>
+
+            <ListBox Name="WordListBox" Width="400" Height="200"
+                     FontSize="15"
+                     
                      Margin="10">
             </ListBox>
-            <ListBox Width="400" Height="200"
+            <ListBox Name="HashWordListBox" Width="400" Height="200"
+                     FontSize="15"
                      Margin="10">
             </ListBox>
-            <Button Margin="5" Content="Play" Width="100">
+            <Button  Name="playbtn" Margin="5" Content="Play" Width="100">
             </Button>
             <Button Margin="5" Content="Pause" Width="100">
             </Button>
