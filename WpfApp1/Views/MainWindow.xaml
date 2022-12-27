@@ -11,9 +11,14 @@
             <TextBox Margin="10,10,0,0" Width="200" Height="30"
                      FontSize="20"
                      Name="wordtxtb">
+                <TextBox.InputBindings>
+                    <KeyBinding Command="{Binding AddCommand}" Gesture="Enter"></KeyBinding>
+                </TextBox.InputBindings>
             </TextBox>
 
-            <ListBox Name="WordListBox" Width="400" Height="200"
+           
+
+            <ListBox ItemsSource="{Binding AllDatas}" Name="WordListBox" Width="400" Height="200"
                      FontSize="15"
                      
                      Margin="10">

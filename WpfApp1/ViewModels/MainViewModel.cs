@@ -24,7 +24,6 @@ namespace WpfApp1.ViewModels
 
         public RelayCommand AddCommand { get; set; }
 
-        public RelayCommand A { get; set; }
 
 
         private ObservableCollection<string> allDatas;
@@ -37,6 +36,11 @@ namespace WpfApp1.ViewModels
 
 
 
+
+        public RelayCommand PlayCommand { get; set; }
+        public RelayCommand ResumeCommand { get; set; }
+        public RelayCommand StopCommand { get; set; }
+        public RelayCommand PauseCommand { get; set; }
 
         public MainViewModel()
         {
@@ -51,12 +55,17 @@ namespace WpfApp1.ViewModels
 
             AddCommand = new RelayCommand(a =>
             {
+                Data data = new Data
+                {
+                    Name = MyTextbox.Text
+                };
+                AllDatas.Add(data.Name);
             });
 
-            A = new RelayCommand(p =>
-            {
-                MessageBox.Show("Hello");
-            });
+
+
+
+   
 
         }
 
