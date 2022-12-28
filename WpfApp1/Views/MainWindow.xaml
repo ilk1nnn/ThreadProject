@@ -18,22 +18,22 @@
 
            
 
-            <ListBox ItemsSource="{Binding AllDatas}" Name="WordListBox" Width="400" Height="200"
+            <ListBox ItemsSource="{Binding AllDatas, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" Name="WordListBox" Width="400" Height="200"
                      FontSize="15"
                      
                      Margin="10">
             </ListBox>
-            <ListBox Name="HashWordListBox" Width="400" Height="200"
+            <ListBox ItemsSource="{Binding AllConvertedDatas, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" Name="HashWordListBox" Width="400" Height="200"
                      FontSize="15"
                      Margin="10">
             </ListBox>
-            <Button  Name="playbtn" Margin="5" Content="Play" Width="100">
+            <Button Command="{Binding PlayCommand}"  Name="playbtn" Margin="5" Content="Play" Width="100">
             </Button>
-            <Button Margin="5" Content="Pause" Width="100">
+            <Button Command="{Binding PauseCommand}" Margin="5" Content="Pause" Width="100">
             </Button>
-            <Button Margin="5" Content="Resume" Width="100">
+            <Button Command="{Binding ResumeCommand}" Margin="5" Content="Resume" Width="100">
             </Button>
-            <Button Margin="5" Content="Stop" Width="100">
+            <Button Command="{Binding StopCommand}" Margin="5" Content="Stop" Width="100">
             </Button>
         </StackPanel>
     </Grid>
